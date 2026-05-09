@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/ghazlabs/sir-flaps-a-lot/issues"
   },
-  "homepage": "https://github.com/ghazlabs/sir-flaps-a-lot#readme",
+  "homepage": "https://ghazlabs.github.io/sir-flaps-a-lot/",
   "engines": {
     "node": ">=20"
   },
