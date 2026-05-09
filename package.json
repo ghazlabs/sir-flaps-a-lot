@@ -1,7 +1,7 @@
 {
   "name": "sir-flaps-a-lot",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "description": "A Flappy Bird-inspired browser game built with PhaserJS for open-source contribution practice.",
   "license": "MIT",
   "repository": {
