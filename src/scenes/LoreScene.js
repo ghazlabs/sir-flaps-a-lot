@@ -15,7 +15,7 @@ export class LoreScene extends Phaser.Scene {
         fontStyle: "bold",
         color: "#f8fafc",
         align: "center",
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 
@@ -23,7 +23,7 @@ export class LoreScene extends Phaser.Scene {
       "In a kingdom of towers and terrible drafts,",
       "one noble geometric knight took to the skies.",
       "His quest: outflap fate, dodge the cursed gates,",
-      "and bring honor to polygons everywhere."
+      "and bring honor to polygons everywhere.",
     ];
 
     this.add
@@ -32,7 +32,7 @@ export class LoreScene extends Phaser.Scene {
         color: "#e2e8f0",
         align: "center",
         lineSpacing: 10,
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 
@@ -41,7 +41,7 @@ export class LoreScene extends Phaser.Scene {
         fontSize: "19px",
         color: "#d4af37",
         align: "center",
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 

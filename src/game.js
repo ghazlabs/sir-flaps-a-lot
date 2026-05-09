@@ -13,7 +13,7 @@ export const GAME_COLORS = {
   stoneLight: 0x64748b,
   gold: 0xd4af37,
   cream: 0xf8fafc,
-  danger: 0xdc2626
+  danger: 0xdc2626,
 };
 
 export const GAME_BALANCE = {
@@ -26,7 +26,7 @@ export const GAME_BALANCE = {
   obstacleWidth: 82,
   initialGapHeight: 246,
   minimumGapHeight: 182,
-  gapShrinkEveryScore: 12
+  gapShrinkEveryScore: 12,
 };
 
 new Phaser.Game({
@@ -39,14 +39,14 @@ new Phaser.Game({
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
     width: GAME_WIDTH,
-    height: GAME_HEIGHT
+    height: GAME_HEIGHT,
   },
   physics: {
     default: "arcade",
     arcade: {
       gravity: { y: GAME_BALANCE.gravityY },
-      debug: false
-    }
+      debug: false,
+    },
   },
-  scene: [LoreScene, MenuScene, GameScene, GameOverScene]
+  scene: [LoreScene, MenuScene, GameScene, GameOverScene],
 });

@@ -22,7 +22,7 @@ export class GameScene extends Phaser.Scene {
     this.obstacleTimer = this.time.addEvent({
       delay: GAME_BALANCE.obstacleSpawnMs,
       loop: true,
-      callback: () => this.spawnObstaclePair()
+      callback: () => this.spawnObstaclePair(),
     });
     this.firstObstacleEvent = this.time.delayedCall(
       GAME_BALANCE.firstObstacleDelayMs,
@@ -51,7 +51,7 @@ export class GameScene extends Phaser.Scene {
         new Phaser.Geom.Point(shieldX * 1.7, shieldY * 1.9),
         new Phaser.Geom.Point(shieldX, shieldY * 2.2),
         new Phaser.Geom.Point(shieldX * 0.3, shieldY * 1.9),
-        new Phaser.Geom.Point(0, shieldY)
+        new Phaser.Geom.Point(0, shieldY),
       ];
 
       playerShape.fillStyle(GAME_COLORS.stoneLight, 1);
@@ -73,7 +73,7 @@ export class GameScene extends Phaser.Scene {
     this.scoreText = this.add.text(20, 20, "Thy Score: 0", {
       fontSize: "34px",
       color: "#f8fafc",
-      fontStyle: "bold"
+      fontStyle: "bold",
     });
   }
 
@@ -175,7 +175,8 @@ export class GameScene extends Phaser.Scene {
     this.score += 1;
     this.scoreText.setText(`Thy Score: ${this.score}`);
 
-    this.currentObstacleSpeed = GAME_BALANCE.obstacleSpeed + this.score * GAME_BALANCE.obstacleSpeedRamp;
+    this.currentObstacleSpeed =
+      GAME_BALANCE.obstacleSpeed + this.score * GAME_BALANCE.obstacleSpeedRamp;
 
     if (
       this.score > 0 &&

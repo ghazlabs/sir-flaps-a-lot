@@ -15,7 +15,7 @@ export class MenuScene extends Phaser.Scene {
         fontSize: "44px",
         fontStyle: "bold",
         color: "#f8fafc",
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 
@@ -24,7 +24,7 @@ export class MenuScene extends Phaser.Scene {
         fontSize: "21px",
         color: "#d4af37",
         align: "center",
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 
@@ -38,7 +38,7 @@ export class MenuScene extends Phaser.Scene {
           color: "#e2e8f0",
           align: "center",
           lineSpacing: 10,
-          wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+          wordWrap: { width: wrapWidth, useAdvancedWrap: true },
         }
       )
       .setOrigin(0.5);
@@ -47,7 +47,7 @@ export class MenuScene extends Phaser.Scene {
       .text(GAME_WIDTH / 2, GAME_HEIGHT - 100, "Tap or SPACE to begin", {
         fontSize: "22px",
         color: "#f8fafc",
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 
@@ -68,7 +68,7 @@ export class MenuScene extends Phaser.Scene {
       new Phaser.Geom.Point(shieldX * 1.7, shieldY * 1.9),
       new Phaser.Geom.Point(shieldX, shieldY * 2.2),
       new Phaser.Geom.Point(shieldX * 0.3, shieldY * 1.9),
-      new Phaser.Geom.Point(0, shieldY)
+      new Phaser.Geom.Point(0, shieldY),
     ];
 
     playerShape.fillStyle(GAME_COLORS.stoneLight, 1);
