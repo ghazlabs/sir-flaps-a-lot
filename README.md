@@ -48,6 +48,17 @@ This repository is designed as an open-source contribution exercise project. The
 
 ```text
 sir-flaps-a-lot/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   ├── pull_request_template.md
+│   └── workflows/
+├── ASSETS.md
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── ROADMAP.md
+├── SUPPORT.md
 ├── index.html
 ├── package.json
 ├── src/
@@ -57,7 +68,7 @@ sir-flaps-a-lot/
 │       ├── MenuScene.js
 │       ├── GameScene.js
 │       └── GameOverScene.js
-└── CLAUDE.md
+└── eslint.config.js
 ```
 
 ## Open Source Docs

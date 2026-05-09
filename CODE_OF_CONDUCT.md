@@ -58,9 +58,8 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders by opening a private report to repository
-maintainers through GitHub Discussions or by contacting maintainers through the
-project support channel described in `SUPPORT.md`.
+reported to the community leaders through the project support channel described
+in `SUPPORT.md`.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the

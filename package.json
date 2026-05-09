@@ -12,6 +12,9 @@
     "url": "https://github.com/ghazlabs/sir-flaps-a-lot/issues"
   },
   "homepage": "https://github.com/ghazlabs/sir-flaps-a-lot#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "keywords": [
     "phaser",
     "vite",
