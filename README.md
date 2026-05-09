@@ -2,6 +2,14 @@
 
 A Flappy Bird-inspired browser game built with PhaserJS where a noble geometric knight flaps through castle hazards.
 
+This repository is designed as an open-source contribution exercise project. The codebase stays intentionally small so contributors can practice real pull request workflows with game-focused tasks.
+
+## Who This Is For
+
+- First-time open-source contributors who want a practical JavaScript project.
+- Developers learning Phaser scene architecture and browser game loops.
+- Maintainers running contribution workshops or pair-programming sessions.
+
 ## Tech Stack
 
 - Vanilla JavaScript (ES modules)
@@ -30,11 +38,27 @@ A Flappy Bird-inspired browser game built with PhaserJS where a noble geometric 
 - `npm run start` - Alias to `dev` for contributor convenience
 - `npm run build` - Build production bundle
 - `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint checks
+- `npm run lint:fix` - Run ESLint with automatic fixes
+- `npm run format` - Format files with Prettier
+- `npm run format:check` - Verify formatting with Prettier
+- `npm run test` - Run Vitest test suite
 
 ## Project Structure
 
 ```text
 sir-flaps-a-lot/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   ├── pull_request_template.md
+│   └── workflows/
+├── ASSETS.md
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── ROADMAP.md
+├── SUPPORT.md
 ├── index.html
 ├── package.json
 ├── src/
@@ -44,8 +68,19 @@ sir-flaps-a-lot/
 │       ├── MenuScene.js
 │       ├── GameScene.js
 │       └── GameOverScene.js
-└── CLAUDE.md
+└── eslint.config.js
 ```
+
+## Open Source Docs
+
+- [Contributing Guide](CONTRIBUTING.md)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Support](SUPPORT.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Asset Attribution](ASSETS.md)
+
+Issue and pull request templates live in `.github/`.
 
 ## Contribution Notes
 
@@ -56,6 +91,7 @@ sir-flaps-a-lot/
 - `src/game.js`: Phaser configuration, constants, and scene registration.
 
 Good first contribution ideas:
+
 - Balance tuning for flap strength, obstacle spawn timing, and gap sizes.
 - Visual polish to medieval obstacle styling.
 - Add optional sound effects and mute toggle.

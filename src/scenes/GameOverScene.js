@@ -16,7 +16,7 @@ export class GameOverScene extends Phaser.Scene {
         fontStyle: "bold",
         color: "#dc2626",
         align: "center",
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 
@@ -25,7 +25,7 @@ export class GameOverScene extends Phaser.Scene {
         fontSize: "32px",
         color: "#f8fafc",
         align: "center",
-        wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+        wordWrap: { width: wrapWidth, useAdvancedWrap: true },
       })
       .setOrigin(0.5);
 
@@ -39,7 +39,7 @@ export class GameOverScene extends Phaser.Scene {
           color: "#d4af37",
           align: "center",
           lineSpacing: 10,
-          wordWrap: { width: wrapWidth, useAdvancedWrap: true }
+          wordWrap: { width: wrapWidth, useAdvancedWrap: true },
         }
       )
       .setOrigin(0.5);
