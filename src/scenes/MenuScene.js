@@ -8,6 +8,7 @@ export class MenuScene extends Phaser.Scene {
   create() {
     this.cameras.main.setBackgroundColor(GAME_COLORS.sky);
     const wrapWidth = GAME_WIDTH - 48;
+    this.warmupPlayerTexture();
 
     this.add
       .text(GAME_WIDTH / 2, 160, "Sir Flaps-a-Lot", {
@@ -52,5 +53,29 @@ export class MenuScene extends Phaser.Scene {
 
     this.input.once("pointerdown", () => this.scene.start("GameScene"));
     this.input.keyboard.once("keydown-SPACE", () => this.scene.start("GameScene"));
+  }
+
+  warmupPlayerTexture() {
+    if (this.textures.exists("sir-flaps")) return;
+
+    const playerShape = this.add.graphics();
+    const shieldX = 34;
+    const shieldY = 30;
+
+    const points = [
+      new Phaser.Geom.Point(shieldX, 0),
+      new Phaser.Geom.Point(shieldX * 2, shieldY),
+      new Phaser.Geom.Point(shieldX * 1.7, shieldY * 1.9),
+      new Phaser.Geom.Point(shieldX, shieldY * 2.2),
+      new Phaser.Geom.Point(shieldX * 0.3, shieldY * 1.9),
+      new Phaser.Geom.Point(0, shieldY)
+    ];
+
+    playerShape.fillStyle(GAME_COLORS.stoneLight, 1);
+    playerShape.fillPoints(points, true);
+    playerShape.lineStyle(4, GAME_COLORS.gold, 1);
+    playerShape.strokePoints(points, true);
+    playerShape.generateTexture("sir-flaps", 68, 72);
+    playerShape.destroy();
   }
 }

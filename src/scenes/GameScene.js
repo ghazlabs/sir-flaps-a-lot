@@ -24,7 +24,12 @@ export class GameScene extends Phaser.Scene {
       loop: true,
       callback: () => this.spawnObstaclePair()
     });
-    this.spawnObstaclePair();
+    this.firstObstacleEvent = this.time.delayedCall(
+      GAME_BALANCE.firstObstacleDelayMs,
+      () => this.spawnObstaclePair(),
+      undefined,
+      this
+    );
 
     this.physics.add.overlap(this.player, this.obstacles, () => this.endGame(), undefined, this);
     this.physics.add.overlap(this.player, this.scoreTriggers, (_, trigger) => {
@@ -36,36 +41,26 @@ export class GameScene extends Phaser.Scene {
   }
 
   createPlayer() {
-    const playerShape = this.add.graphics();
-    const shieldX = 34;
-    const shieldY = 30;
-    playerShape.fillStyle(GAME_COLORS.stoneLight, 1);
-    playerShape.fillPoints(
-      [
+    if (!this.textures.exists("sir-flaps")) {
+      const playerShape = this.add.graphics();
+      const shieldX = 34;
+      const shieldY = 30;
+      const points = [
         new Phaser.Geom.Point(shieldX, 0),
         new Phaser.Geom.Point(shieldX * 2, shieldY),
         new Phaser.Geom.Point(shieldX * 1.7, shieldY * 1.9),
         new Phaser.Geom.Point(shieldX, shieldY * 2.2),
         new Phaser.Geom.Point(shieldX * 0.3, shieldY * 1.9),
         new Phaser.Geom.Point(0, shieldY)
-      ],
-      true
-    );
-    playerShape.lineStyle(4, GAME_COLORS.gold, 1);
-    playerShape.strokePoints(
-      [
-        new Phaser.Geom.Point(shieldX, 0),
-        new Phaser.Geom.Point(shieldX * 2, shieldY),
-        new Phaser.Geom.Point(shieldX * 1.7, shieldY * 1.9),
-        new Phaser.Geom.Point(shieldX, shieldY * 2.2),
-        new Phaser.Geom.Point(shieldX * 0.3, shieldY * 1.9),
-        new Phaser.Geom.Point(0, shieldY)
-      ],
-      true
-    );
+      ];
 
-    playerShape.generateTexture("sir-flaps", 68, 72);
-    playerShape.destroy();
+      playerShape.fillStyle(GAME_COLORS.stoneLight, 1);
+      playerShape.fillPoints(points, true);
+      playerShape.lineStyle(4, GAME_COLORS.gold, 1);
+      playerShape.strokePoints(points, true);
+      playerShape.generateTexture("sir-flaps", 68, 72);
+      playerShape.destroy();
+    }
 
     this.player = this.physics.add.sprite(120, GAME_HEIGHT / 2, "sir-flaps");
     this.player.setCollideWorldBounds(false);
@@ -197,6 +192,9 @@ export class GameScene extends Phaser.Scene {
     this.input.off("pointerdown");
     if (this.obstacleTimer) {
       this.obstacleTimer.remove(false);
+    }
+    if (this.firstObstacleEvent) {
+      this.firstObstacleEvent.remove(false);
     }
     this.scrollables.length = 0;
 

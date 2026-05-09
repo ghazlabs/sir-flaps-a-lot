@@ -21,6 +21,7 @@ export const GAME_BALANCE = {
   flapVelocity: -440,
   obstacleSpeed: 172,
   obstacleSpeedRamp: 1.25,
+  firstObstacleDelayMs: 320,
   obstacleSpawnMs: 1450,
   obstacleWidth: 82,
   initialGapHeight: 246,
@@ -34,6 +35,12 @@ new Phaser.Game({
   height: GAME_HEIGHT,
   parent: "game-root",
   backgroundColor: GAME_COLORS.sky,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: GAME_WIDTH,
+    height: GAME_HEIGHT
+  },
   physics: {
     default: "arcade",
     arcade: {
