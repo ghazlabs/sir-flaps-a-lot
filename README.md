@@ -4,6 +4,8 @@ A Flappy Bird-inspired browser game built with PhaserJS where a noble geometric 
 
 This repository is designed as an open-source contribution exercise project. The codebase stays intentionally small so contributors can practice real pull request workflows with game-focused tasks.
 
+**Play the demo:** [https://ghazlabs.github.io/sir-flaps-a-lot/](https://ghazlabs.github.io/sir-flaps-a-lot/) — open it in your browser and give the knight a flap; no install required.
+
 ## Who This Is For
 
 - First-time open-source contributors who want a practical JavaScript project.
